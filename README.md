@@ -9,6 +9,7 @@ Duck DB의 특성에 대한 이해를 목적으로 python 환경에서 테이블
 ### need to know
 1. Duck DB와 MySQL의 쿼리는 기본적인 형태는 유사하지만, 지엽적인 부분에서의 차이점들이 상당히 많습니다.
 2. python 환경에서 생성한 Duck DB 테이블은 in-memory 환경이 아닌 로컬 환경에 저장됩니다.
+3. connection labels을 사용하지 않는 한, Duck DB는 단일 connector만을 지원합니다. Thread를 열거나 복수의 스크립트로 connection을 구성하려면 connection label이 필요하며, 해당 레포지토리에서는 관련 내용에 대해서 다루지 않습니다. 공식 가이드를 참조 부탁드립니다.
 
 ### target
 - AWS s3 버킷에 저장된 2018.01.01~2023.09.08 기간의 박스오피스(Kobis, Parquet 형식) 데이터를 사용합니다.

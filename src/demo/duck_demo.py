@@ -8,7 +8,8 @@ s3_access = parser.get("AWS", "S3_ACCESS")
 s3_secret = parser.get("AWS", "S3_SECRET")
 
 # DuckDB에 연결
-conn = duckdb.connect(database='memory', read_only=False)  
+# 절대경로 지정 필요 (이유 불문)
+conn = duckdb.connect(database='/home/hooniegit/git/personal/duck_and_boxoffice/database/memory', read_only=False)  
 
 # 쿼리 실행
 # s3 버킷에 위치한 TMDB 영화 데이터들을 테이블로 생성하는 데모입니다.

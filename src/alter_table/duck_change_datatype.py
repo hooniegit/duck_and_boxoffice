@@ -1,7 +1,8 @@
 import duckdb
 
 # DuckDB에 연결
-conn = duckdb.connect(database='memory', read_only=False)  
+# 절대경로 지정 필요 (이유 불문)
+conn = duckdb.connect(database='/home/hooniegit/git/personal/duck_and_boxoffice/database/memory', read_only=False)  
 
 # 쿼리 실행
 cursor = conn.cursor()
